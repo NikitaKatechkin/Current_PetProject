@@ -1,0 +1,1 @@
+cd ./out/build/ && ./Game_PetProject.exe && cd ../../
