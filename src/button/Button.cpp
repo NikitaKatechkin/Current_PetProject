@@ -21,3 +21,11 @@ void Button::setSize(const sf::Vector2f& size) {
 sf::Vector2f Button::getSize() {
     return background.getSize();
 }
+
+void Button::setBackgroundColor(const sf::Color& color) {
+    background.setFillColor(color);
+}
+
+sf::Color Button::getBackgroundColor() {
+    return background.getFillColor();
+}

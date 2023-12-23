@@ -17,6 +17,10 @@ public:
     void         setSize(const sf::Vector2f& size);
     sf::Vector2f getSize();
 
+public:
+    void      setBackgroundColor(const sf::Color&);
+    sf::Color getBackgroundColor();
+
 private:
     sf::RectangleShape background;
 };

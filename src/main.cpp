@@ -10,7 +10,8 @@ int main()
     // sf::CircleShape shape(100.f);
     // shape.setFillColor(sf::Color::Green);
 
-    button.setSize(button.getSize() * 2.f);
+    button.setSize(button.getSize() / 2.f);
+    button.setBackgroundColor(sf::Color::Cyan);
 
     while (window.isOpen())
     {
