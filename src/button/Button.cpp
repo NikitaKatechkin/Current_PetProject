@@ -1,9 +1,8 @@
 #include "Button.h"
 
-Button::Button() :
-    background({sf::Vector2f(150, 100)})
-{
-    background.setFillColor(sf::Color::Magenta);
+Button::Button(const sf::Vector2f& size, const sf::Color& backgroundColor) {
+    setSize(size);
+    setBackgroundColor(backgroundColor);
 }
 
 Button::~Button() {
