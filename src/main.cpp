@@ -17,7 +17,7 @@ int main()
     button.setBackgroundColor(sf::Color::Cyan);
 
     sf::Font font;
-    if (not font.loadFromFile("C:\\Users\\NikiBot\\source\\repos\\Game_PetProject\\src\\window\\arial.ttf")) {
+    if (not font.loadFromFile("C:\\Users\\NikiBot\\source\\repos\\Game_PetProject\\assets\\fonts\\arial.ttf")) {
         return 0;
     }
 
