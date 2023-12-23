@@ -21,10 +21,12 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 target_include_directories(${PROJECT_NAME} 
     PUBLIC ./ext/SFML/include
+    PUBLIC ./src
 )
 
 target_link_directories(${PROJECT_NAME}
     PRIVATE ./ext/SFML/src
+    PRIVATE ./src
 )
 
 target_link_libraries(${PROJECT_NAME} sfml-graphics)
