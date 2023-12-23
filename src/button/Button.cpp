@@ -9,6 +9,24 @@ Button::~Button() {
 
 }
 
+void Button::update(const ButtonUpdateContext& buttonUpdCtx) {
+    bool isMouseIntersectsWithButton = background.getLocalBounds().intersects({
+        static_cast<float>(buttonUpdCtx.mousePosition.x), 
+        static_cast<float>(buttonUpdCtx.mousePosition.y), 
+        1.f, 
+        1.f
+    });
+
+    if (isMouseSetOn != isMouseIntersectsWithButton) {
+        isMouseSetOn = isMouseIntersectsWithButton;
+
+        auto currentColor = getBackgroundColor();
+        currentColor.a = (isMouseSetOn) ? 125 : 255;
+
+        setBackgroundColor(currentColor);
+    }
+}
+
 void Button::draw(Window& window) {
     window.draw(background);
 }

@@ -4,6 +4,10 @@
 
 #include "window/Window.h"
 
+struct ButtonUpdateContext {
+    sf::Vector2i mousePosition;
+};
+
 class Button
 {
 public:
@@ -12,6 +16,7 @@ public:
     ~Button();
 
 public:
+    void update(const ButtonUpdateContext&);
     void draw(Window&);
 
 public:
@@ -24,4 +29,5 @@ public:
 
 private:
     sf::RectangleShape background;
+    bool isMouseSetOn{false};
 };

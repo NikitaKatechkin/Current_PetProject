@@ -28,6 +28,7 @@ int main()
     while (window.isOpen())
     {
         window.updateInput();
+        button.update({window.getMousePosition()});
 
         window.clear();
 
