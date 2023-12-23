@@ -141,3 +141,7 @@ void Window::refreshWindow()
     m_renderWindow = new sf::RenderWindow(sf::VideoMode(m_context.size.x, m_context.size.y), 
                                           m_context.title);
 }
+
+sf::Vector2i Window::getMousePosition() {
+    return m_mouse.getPosition(*m_renderWindow);
+}

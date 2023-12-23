@@ -35,10 +35,15 @@ public:
     void updateContext(const WindowContext& context);
     void refreshWindow();
 
+public:
+    sf::Vector2i getMousePosition();
+
 private:
     sf::RenderWindow* m_renderWindow = nullptr;
     WindowContext m_context;
     sf::Event m_event;
+
+    sf::Mouse m_mouse;
 
 private:
     bool isRenderWindowPtrValid();
