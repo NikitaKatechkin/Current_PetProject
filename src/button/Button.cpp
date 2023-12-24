@@ -10,7 +10,7 @@ Button::~Button() {
 }
 
 void Button::update(const ButtonUpdateContext& buttonUpdCtx) {
-    bool isMouseIntersectsWithButton = background.getLocalBounds().intersects({
+    bool isMouseIntersectsWithButton = background.getGlobalBounds().intersects({
         static_cast<float>(buttonUpdCtx.mousePosition.x), 
         static_cast<float>(buttonUpdCtx.mousePosition.y), 
         1.f, 
@@ -45,4 +45,12 @@ void Button::setBackgroundColor(const sf::Color& color) {
 
 sf::Color Button::getBackgroundColor() {
     return background.getFillColor();
+}
+
+void Button::setPosition(const sf::Vector2f& position) {
+    background.setPosition(position);
+}
+
+sf::Vector2f Button::getPosition() {
+    return background.getPosition();
 }

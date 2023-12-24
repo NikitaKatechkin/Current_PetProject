@@ -13,8 +13,9 @@ int main()
     Window window;
 
     Button button({75.f, 50.f}, sf::Color::Cyan);
-    // TextButton textButton({75.f, 50.f}, sf::Color::Cyan);
-    // textButton.setPosition(sf::Vector2f(window.getSize()) / 2.f);
+
+    TextButton textButton({75.f, 50.f}, sf::Color::Magenta);
+    textButton.setPosition(sf::Vector2f(window.getSize()) / 2.f);
 
     sf::Font font;
     if (not font.loadFromFile("C:\\Users\\NikiBot\\source\\repos\\Game_PetProject\\assets\\fonts\\arial.ttf")) {
@@ -26,11 +27,14 @@ int main()
     while (window.isOpen())
     {
         window.updateInput();
+        
         button.update({window.getMousePosition()});
+        textButton.update({window.getMousePosition()});
 
         window.clear();
 
         button.draw(window);
+        textButton.draw(window);
 
         if (DEBUG_MODE) {
             auto windowSize = window.getSize();

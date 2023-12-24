@@ -27,6 +27,10 @@ public:
     virtual void      setBackgroundColor(const sf::Color&);
     virtual sf::Color getBackgroundColor();
 
+public:
+    virtual void         setPosition(const sf::Vector2f&);
+    virtual sf::Vector2f getPosition();
+
 protected:
     sf::RectangleShape background;
     bool isMouseSetOn{false};
