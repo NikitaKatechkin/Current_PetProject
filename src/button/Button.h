@@ -16,18 +16,18 @@ public:
     ~Button();
 
 public:
-    void update(const ButtonUpdateContext&);
-    void draw(Window&);
+    virtual void update(const ButtonUpdateContext&);
+    virtual void draw(Window&);
 
 public:
-    void         setSize(const sf::Vector2f&);
-    sf::Vector2f getSize();
+    virtual void         setSize(const sf::Vector2f&);
+    virtual sf::Vector2f getSize();
 
 public:
-    void      setBackgroundColor(const sf::Color&);
-    sf::Color getBackgroundColor();
+    virtual void      setBackgroundColor(const sf::Color&);
+    virtual sf::Color getBackgroundColor();
 
-private:
+protected:
     sf::RectangleShape background;
     bool isMouseSetOn{false};
 };

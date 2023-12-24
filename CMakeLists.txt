@@ -6,11 +6,13 @@ set(SOURCES
     ./src/main.cpp
     ./src/window/Window.cpp
     ./src/button/Button.cpp
+    ./src/button/TextButton.cpp
 )
 
 set(HEADERS
     ./src/window/Window.h
     ./src/button/Button.h
+    ./src/button/TextButton.h
 )
 
 set(BUILD_SHARED_LIBS OFF)

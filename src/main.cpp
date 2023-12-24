@@ -2,6 +2,7 @@
 
 #include "window/Window.h"
 #include "button/Button.h"
+#include "button/TextButton.h"
 
 #include <sstream>
 
@@ -11,19 +12,16 @@ int main()
 {
     Window window;
 
-    Button button;
-    button.setSize({150.f, 100.f});
-    button.setSize(button.getSize() / 2.f);
-    button.setBackgroundColor(sf::Color::Cyan);
+    Button button({75.f, 50.f}, sf::Color::Cyan);
+    // TextButton textButton({75.f, 50.f}, sf::Color::Cyan);
+    // textButton.setPosition(sf::Vector2f(window.getSize()) / 2.f);
 
     sf::Font font;
     if (not font.loadFromFile("C:\\Users\\NikiBot\\source\\repos\\Game_PetProject\\assets\\fonts\\arial.ttf")) {
         return 0;
     }
 
-    sf::Text text;
-    text.setFont(font);
-    text.setCharacterSize(10);
+    sf::Text text(sf::String(""), font, 10);
 
     while (window.isOpen())
     {
